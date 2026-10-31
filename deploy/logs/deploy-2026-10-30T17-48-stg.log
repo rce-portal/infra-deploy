@@ -1,0 +1,22 @@
+[2026-10-30 17:48:09] === Deploy started ===
+[2026-10-30 17:48:09] runner: github-actions/ubuntu-22.04
+[2026-10-30 17:48:09] branch: develop
+[2026-10-30 17:48:09] environment: stg
+[2026-10-30 17:48:13] HEAD is now at e4d5c6b chore: update footer links
+[2026-10-30 17:48:14] node v20.11.1 / npm 10.2.4
+[2026-10-30 17:48:20] npm ci --production
+[2026-10-30 17:48:28] added 380 packages, audited 423 packages in 8s
+[2026-10-30 17:48:29] npm WARN deprecated inflight@1.0.6: This module is not supported
+[2026-10-30 17:48:32] 1 moderate severity vulnerabilities
+[2026-10-30 17:48:34] npm run build
+[2026-10-30 17:48:39] dist/index.html written (8.4 KiB)
+[2026-10-30 17:48:39] version:    1.4.3-dev
+[2026-10-30 17:48:40] commit:     e4d5c6b
+[2026-10-30 17:48:41] sha256:     a52f50d928e00299f1bb22a442140c261621f6807dba4285a1dea485236f00e3
+[2026-10-30 17:48:42] release-id: rce-stg-2026-10-30-e4d5c6b
+[2026-10-30 17:48:48] aws s3 cp dist/index.html s3://rce-portal-backups-stg/stg/index.html
+[2026-10-30 17:48:51] OK  upload complete
+[2026-10-30 17:48:54] aws ssm send-command --targets Key=tag:Role,Values=web-stg
+[2026-10-30 17:48:59] OK  sync complete on web-stg
+[2026-10-30 17:49:08] smoke-test: GET / -> 200, GET /health -> 200
+[2026-10-30 17:49:08] === Deploy finished (59s) ===

@@ -1,0 +1,14 @@
+[2026-10-31 02:13:04] === Deploy started ===
+[2026-10-31 02:13:04] runner: self-hosted/bkp-01
+[2026-10-31 02:13:04] branch: main
+[2026-10-31 02:13:04] environment: prod
+[2026-10-31 02:13:05] trigger: repository_dispatch (webhook)
+[2026-10-31 02:13:06] user-agent: LegacyBackup/0.1 aws-cli/2.15.30
+[2026-10-31 02:13:08] git status: skipped (no checkout)
+[2026-10-31 02:13:08] version:    1.4.2
+[2026-10-31 02:13:08] commit:     a1b2c3d
+[2026-10-31 02:13:09] release-id: rce-prod-2026-10-31-a1b2c3d
+[2026-10-31 02:13:12] aws s3 cp index.html s3://rce-portal-backups/prod/index.html
+[2026-10-31 02:13:13] OK  upload complete
+[2026-10-31 02:13:14] smoke-test: skipped
+[2026-10-31 02:13:14] === Deploy finished (10s) ===

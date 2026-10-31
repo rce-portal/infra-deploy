@@ -1,0 +1,22 @@
+[2026-09-12 10:03:44] === Deploy started ===
+[2026-09-12 10:03:44] runner: github-actions/ubuntu-22.04
+[2026-09-12 10:03:44] branch: main
+[2026-09-12 10:03:44] environment: prod
+[2026-09-12 10:03:47] HEAD is now at 5e6f7a8 chore: bump version to 1.4.1
+[2026-09-12 10:03:53] node v20.11.1 / npm 10.2.4
+[2026-09-12 10:03:54] npm ci --production
+[2026-09-12 10:04:12] added 412 packages, audited 411 packages in 12s
+[2026-09-12 10:04:16] npm WARN deprecated inflight@1.0.6: This module is not supported
+[2026-09-12 10:04:20] 1 moderate severity vulnerabilities
+[2026-09-12 10:04:22] npm run build
+[2026-09-12 10:04:26] dist/index.html written (8.4 KiB)
+[2026-09-12 10:04:27] version:    1.4.1
+[2026-09-12 10:04:28] commit:     5e6f7a8
+[2026-09-12 10:04:28] sha256:     87b929924a2a9086ead493514708226c97078caff90e2625bbe014b288b66105
+[2026-09-12 10:04:28] release-id: rce-prod-2026-09-12-5e6f7a8
+[2026-09-12 10:04:34] aws s3 cp dist/index.html s3://rce-portal-backups/prod/index.html
+[2026-09-12 10:04:37] OK  upload complete
+[2026-09-12 10:04:43] aws ssm send-command --targets Key=tag:Role,Values=web-prod
+[2026-09-12 10:04:49] OK  sync complete on web-prod
+[2026-09-12 10:04:54] smoke-test: GET / -> 200, GET /health -> 200
+[2026-09-12 10:04:55] === Deploy finished (70s) ===

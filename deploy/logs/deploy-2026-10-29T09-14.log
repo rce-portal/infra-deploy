@@ -1,0 +1,16 @@
+[2026-10-29 09:14:51] === Deploy started ===
+[2026-10-29 09:14:51] runner: github-actions/ubuntu-22.04
+[2026-10-29 09:14:51] branch: main
+[2026-10-29 09:14:51] environment: prod
+[2026-10-29 09:14:54] HEAD is now at 9f8e7d6 feat: banner novedades
+[2026-10-29 09:14:58] node v20.11.1 / npm 10.2.4
+[2026-10-29 09:15:04] npm ci --production
+[2026-10-29 09:15:14] added 391 packages, audited 444 packages in 14s
+[2026-10-29 09:15:18] npm WARN deprecated inflight@1.0.6: This module is not supported
+[2026-10-29 09:15:22] 4 moderate severity vulnerabilities
+[2026-10-29 09:15:28] npm run build
+[2026-10-29 09:15:31] ERROR in ./src/pages/home.tsx 42:17
+[2026-10-29 09:15:33] Module not found: Error: Can't resolve '../components/BannerNovedades'
+[2026-10-29 09:15:39] npm ERR! code ELIFECYCLE
+[2026-10-29 09:15:42] release-id: rce-prod-2026-10-29-9f8e7d6 (not published)
+[2026-10-29 09:15:43] === Deploy FAILED (51s) ===

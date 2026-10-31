@@ -1,0 +1,25 @@
+[2026-10-30 09:31:18] === Deploy started ===
+[2026-10-30 09:31:18] runner: github-actions/ubuntu-22.04
+[2026-10-30 09:31:18] branch: main
+[2026-10-30 09:31:18] environment: prod
+[2026-10-30 09:31:19] HEAD is now at 77c1e0a feat: banner novedades
+[2026-10-30 09:31:22] node v20.11.1 / npm 10.2.4
+[2026-10-30 09:31:28] npm ci --production
+[2026-10-30 09:31:45] added 381 packages, audited 448 packages in 9s
+[2026-10-30 09:31:46] npm WARN deprecated inflight@1.0.6: This module is not supported
+[2026-10-30 09:31:51] 1 moderate severity vulnerabilities
+[2026-10-30 09:31:52] npm run build
+[2026-10-30 09:31:58] dist/index.html written (8.3 KiB)
+[2026-10-30 09:31:58] version:    1.4.2-rc1
+[2026-10-30 09:31:58] commit:     77c1e0a
+[2026-10-30 09:31:59] sha256:     a1d4fc9e523e3f180e3fd96b1787a6f872658ec460cef59b326ebbb33f66335e
+[2026-10-30 09:32:00] release-id: rce-prod-2026-10-30-77c1e0a
+[2026-10-30 09:32:03] aws s3 cp dist/index.html s3://rce-portal-backups/prod/index.html
+[2026-10-30 09:32:05] OK  upload complete
+[2026-10-30 09:32:08] aws ssm send-command --targets Key=tag:Role,Values=web-prod
+[2026-10-30 09:32:16] OK  sync complete on web-prod
+[2026-10-30 09:32:46] smoke-test: GET /health -> 500 (3/3 failed)
+[2026-10-30 09:32:48] canary failed, starting automatic rollback
+[2026-10-30 09:32:54] aws s3 cp s3://rce-portal-backups/prod/index.html.prev s3://rce-portal-backups/prod/index.html
+[2026-10-30 09:33:02] ROLLBACK complete, restored previous release
+[2026-10-30 09:33:03] === Deploy ROLLED BACK (104s) ===
